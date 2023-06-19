@@ -1,0 +1,180 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    @apply max-w-screen overflow-x-hidden overscroll-y-none !scroll-smooth;
+  }
+
+  body {
+    @apply font-secondary-regular text-black bg-white antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  *,
+  *::before,
+  *::after {
+    @apply box-border p-0 m-0;
+  }
+
+  *:focus {
+    @apply outline-none;
+  }
+
+  a {
+    @apply text-inherit no-underline;
+  }
+
+  p {
+    @apply md:text-lg;
+  }
+
+  h1 {
+    @apply font-secondary-medium text-5xl md:text-8xl leading-tight md:leading-tight;
+  }
+
+  h2 {
+    @apply h2;
+  }
+
+  h3 {
+    @apply font-secondary-medium text-2xl md:text-4xl;
+  }
+
+  h4 {
+    @apply font-secondary-medium text-xl md:text-3xl;
+  }
+
+  /* Primary Font - CONNEQT */
+
+  @font-face {
+    font-family: Primary;
+    src: url(../../public/fonts/primary/regular.woff2);
+    font-display: swap;
+  }
+
+  /* Secondary Font - Tomato Grotesk */
+
+  @font-face {
+    font-family: Secondary light;
+    src: url(../../public/fonts/secondary/light.woff2);
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: Secondary regular;
+    src: url(../../public/fonts/secondary/regular.woff2);
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: Secondary medium;
+    src: url(../../public/fonts/secondary/medium.woff2);
+    font-display: swap;
+  }
+
+  /* Interactivity */
+
+  ::-webkit-scrollbar {
+    @apply h-3 w-1.5 bg-secondary/60;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-secondary;
+    -webkit-border-radius: 1ex;
+  }
+
+  ::-webkit-scrollbar-corner {
+    @appky bg-secondary;
+  }
+}
+
+@layer utilities {
+  /* Spacing */
+
+  .pt-section {
+    @apply pt-24;
+  }
+
+  .pb-section {
+    @apply pb-24;
+  }
+
+  .py-section {
+    @apply pt-section pb-section;
+  }
+
+  .pr-section {
+    @apply pr-5%;
+  }
+
+  .pl-section {
+    @apply pl-5%;
+  }
+
+  .px-section {
+    @apply pr-section pl-section;
+  }
+
+  .p-section {
+    @apply px-section py-section;
+  }
+
+  /* Typography */
+
+  .h2s {
+    @apply font-secondary-medium text-4xl md:text-8xl leading-tight md:leading-snug tracking-wide;
+  }
+
+  .h2 {
+    @apply font-secondary-medium text-3xl md:text-5xl leading-tight md:leading-tight;
+  }
+
+  .text-gradient-base {
+    @apply py-1 text-transparent bg-clip-text bg-gradient-to-r;
+  }
+
+  .text-gradient {
+    @apply text-gradient-base from-secondary to-primary;
+  }
+
+  .text-gradient-light {
+    @apply text-gradient-base from-stone-100 via-white to-white;
+  }
+
+  .text-gradient-dark {
+    @apply text-gradient-base from-secondary to-stone-700;
+  }
+
+  .text-tagline {
+    @apply font-secondary-medium text-sm md:text-base text-secondary;
+  }
+
+  /* Background */
+  
+  .bg-base {
+    @apply bg-cover bg-center bg-no-repeat;
+  }
+
+  .bg-gradient {
+    @apply bg-gradient-to-r from-secondary to-primary;
+  }
+}
+
+@layer components {
+  /* Input */
+
+  .btn {
+    @apply max-w-fit px-8 py-5 font-secondary-medium text-lg text-center leading-none whitespace-nowrap rounded-lg;
+  }
+
+  .btn__primary {
+    @apply text-white bg-primary;
+  }
+
+  .btn__secondary {
+    @apply text-secondary bg-white;
+  }
+}
