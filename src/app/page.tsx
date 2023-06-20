@@ -15,19 +15,19 @@ import type { HeaderProps } from '@/types/data-dislay'
 const SOLUTIONS_HEADERS: ReadonlyArray<HeaderProps> = [
   {
     heading: SOLUTIONS[0],
-    description: 'Protegemos tu infraestructura contra amenazas potenciales. Trabajamos en la instalación, configuración, revisión y monitoreo de cámaras, cámaras de seguridad analógicas y digitales cableadas, cámaras IP, sistemas con videograbadores digitales, etc. Realizamos auditorías de seguridad periódicas y pruebas de penetración para identificar y solucionar cualquier vulnerabilidad potencial. Nuestro equipo de expertos en seguridad está disponible las 24 horas del día, los 7 días de la semana, para responder a cualquier incidencia.'
+    description: 'Protegemos tu infraestructura contra amenazas potenciales mediante la instalación de sistemas de videovigilancia. Realizamos auditorias de seguridad periódicas y pruebas de penetración para identificar y solucionar cualquier vulnerabilidad. Nuestro equipo de expertos en seguridad está disponible 24/7 los 365 días del año.'
   },
   {
     heading: SOLUTIONS[1],
-    description: 'Ofrecemos soluciones de control inteligente como controles de acceso, videoporteros, cerraduras y timbres inteligentes, y mucho más, lo que facilita supervisar y administrar tu infraestructura de manera remota. Nuestras soluciones incluyen sistemas de monitoreo en tiempo real, análisis predictivos y herramientas de automatización. Estas soluciones te permiten prever problemas potenciales, optimizar el uso de recursos y mejorar la eficiencia operativa en cualquier espacio.'
+    description: 'Ofrecemos soluciones de control de acceso inteligente, facilitando la supervisión y administración de la infraestructura de manera presencial y remota. Nuestras soluciones incluyen monitoreo en tiempo real, análisis predictivo y herramientas de automatización que ayudarán a prever problemas potenciales y mejorar la eficiencia operativa.'
   },
   {
     heading: SOLUTIONS[2],
-    description: 'Nos especializamos en la instalación y mantenimiento preventivo y correctivo de redes. Diseñamos e implementamos redes de alta velocidad, escalables y seguras, que pueden adaptarse a las necesidades de nuestros clientes. Nuestro equipo de expertos está capacitado para trabajar con una variedad de tecnologías de red, garantizando una conectividad ininterrumpida y segura. Te ofrecemos servicios de mantenimiento proactivo, realizando actualizaciones y optimizaciones constantes para asegurar que tus redes funcionen de manera óptima en todo momento. Estamos comprometidos con proporcionar soluciones de red que impulsan la productividad y mejoran la eficiencia.'
+    description: 'Diseñamos e implementamos redes acorde a las necesidades de nuestros clientes.Nuestro equipo de expertos está capacitado para trabajar con una variedad de tecnologías de red, garantizando una conectividad ininterrumpida y segura, dando mantenimiento y actualizaciones constantes para asegurar que tus redes funcionen de manera óptima en todo momento.'
   },
   {
     heading: SOLUTIONS[3],
-    description: 'Trabajamos con una amplia gama de tecnologías. Tenemos a disposición la instalación, configuración, revisión y monitoreo de paneles de alarma sensores de movimiento, sensores de puerta, sensores de humo, sensor de agua, sensor de gas y mucho más, garantizando su correcto funcionamiento y seguridad, entre otros. Al mismo tiempo, ofrecemos un mantenimiento proactivo para identificar y solucionar problemas antes de que puedan afectar tu bienestar, así como el de tu familia, empleados, socios o colaboradores. '
+    description: 'Realizamos la configuración, revisión y monitoreo de paneles de alarma, sensores de: apertura, movimiento, humo, gas, agua y más; para garantizar su correcto funcionamiento. Al mismo tiempo, ofrecemos un mantenimiento proactivo para identificar y solucionar problemas antes de que puedan afectar tu bienestar, el de tu familia, empleados, socios, colaboradores, inversiones y patrimonio.'
   }
 ]
 
@@ -43,7 +43,7 @@ const VALUES_HEADERS: ReadonlyArray<HeaderProps> = [
   },
   {
     heading: 'Excelencia',
-    description: 'Nos esforzamos por entregar sólo lo mejor a nuestros clientes. Nuestro objetivo es superar las expectativas, garantizando servicios de alta calidad y atención al detalle.'
+    description: 'Nos esforzamos por entregar solo lo mejor a nuestros clientes. Nuestro objetivo es superar las expectativas, garantizando servicios de alta calidad y atención al detalle.'
   },
   {
     heading: 'Adaptabilidad',

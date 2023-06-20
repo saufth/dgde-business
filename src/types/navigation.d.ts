@@ -1,15 +1,12 @@
 // Types
+import type { APP_ROUTES } from '@/modules/navigation/config'
 import type { Actionable } from './input'
 import type { Parent } from './layout'
 import type { Size } from './sizing'
 import type { Themeable } from './theme'
 
 /** The main routes of the application */
-export type AppRoute = 'home'
-| 'solutions'
-| 'about'
-| 'values'
-| 'contact'
+export type AppRoute = typeof APP_ROUTES[keyof typeof APP_ROUTES]
 
 /** Specifes where to open the linked document */
 export type LinkTarget = '_blank'

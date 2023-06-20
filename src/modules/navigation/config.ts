@@ -1,16 +1,16 @@
 // Config
 import { organization } from '../app/config'
 // Types
-import type { AppRoute, Navigable } from '@/types/navigation'
+import type { Navigable } from '@/types/navigation'
 
 /** The application route names configuration */
-export const APP_ROUTES: Readonly<Record<AppRoute, AppRoute>> = {
+export const APP_ROUTES = {
   home: 'home',
   solutions: 'solutions',
   about: 'about',
   values: 'values',
   contact: 'contact'
-}
+} as const
 
 /** The home navigation configuration */
 export const HOME_NAV: Readonly<Navigable> = {
