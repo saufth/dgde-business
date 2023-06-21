@@ -53,4 +53,4 @@ export interface LinkProps extends Linkabe, Themeable, Actionable {
 }
 
 /** The link button component properties */
-export interface LinkButtonProps extends LinkProps, Themeable {}
+export interface LinkButtonProps extends Omit<LinkProps, 'underline'> {}

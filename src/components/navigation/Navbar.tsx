@@ -9,14 +9,14 @@ import LinkToContact from './LinkToContact'
 import { useGlobalStore } from '@/modules/app/store'
 import { shallow } from 'zustand/shallow'
 // Animation
-import { motion } from 'framer-motion'
+import { motion, type Variants } from 'framer-motion'
 // Config
 import { NAV_LIST, navAriaLabel } from '@/modules/navigation/config'
 import { OC_STATE } from '@/modules/input/config'
 import { SIZES } from '@/modules/sizing/config'
 import { THEMES } from '@/modules/theme/config'
 // Tpes
-import type { OCVariantsConfig, Transition } from '@/types/animation'
+import type { Transition } from '@/types/animation'
 
 /** The nav animation transitions */
 const transition: Transition = {
@@ -26,13 +26,13 @@ const transition: Transition = {
 }
 
 /** Header element animation variants */
-const NAV_VARIANTS: OCVariantsConfig = {
-  open: {
+const NAV_VARIANTS: Variants = {
+  [OC_STATE.open]: {
     width: '100%',
     opacity: 1,
     transition
   },
-  closed: {
+  [OC_STATE.closed]: {
     width: '0%',
     opacity: 0,
     transition
@@ -91,9 +91,9 @@ export default function Navbar () {
               </ul>
 
               <div className='grid gap-y-6'>
-                <LinkLogo theme={THEMES.secondary} />
-                <LinkToContact theme={THEMES.secondary} />
-                <LinkEmail theme={THEMES.secondary} />
+                <LinkLogo action={closeMenu} theme={THEMES.secondary} />
+                <LinkToContact action={closeMenu} theme={THEMES.secondary} />
+                <LinkEmail action={closeMenu} theme={THEMES.secondary} />
               </div>
             </div>
           </div>

@@ -1,6 +1,12 @@
 // React
 import { useEffect, useState } from 'react'
 
+/** Media query used to check for mobile size */
+export const mobileQuery = '(max-width: 768px)'
+
+/** Media query used to check for desktop size */
+export const desktopQuery = '(min-width: 768px)'
+
 /**
  * Used to match a media query with the current size of the window
  * @param query The query to match

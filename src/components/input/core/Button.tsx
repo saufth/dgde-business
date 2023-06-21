@@ -3,22 +3,18 @@ import { BUTTON_TYPES } from '@/modules/input/config'
 import { THEMES } from '@/modules/theme/config'
 // Types
 import type { ButtonProps } from '@/types/input'
-import type { Theme } from '@/types/theme'
 
 /** The button themeable styles configuration */
-export const BTN_THEME_STYLES: Readonly<Record<Theme, string>> = {
-  primary: 'btn__primary',
-  secondary: 'btn__secondary'
-}
+export const BTN_THEME_STYLES = {
+  [THEMES.primary]: 'btn__primary',
+  [THEMES.secondary]: 'btn__secondary'
+} as const
 
 /**
  * A simple themeable button component
  * @see {@link ButtonProps} for props specification
  * @param ButtonProps The component props
  * @returns The Button component
- *
- * @default type 'button'
- * @default theme 'primary'
  */
 export default function Button ({
   children,

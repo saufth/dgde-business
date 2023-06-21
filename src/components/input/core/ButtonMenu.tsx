@@ -2,14 +2,14 @@
 import { useGlobalStore } from '@/modules/app/store'
 import { shallow } from 'zustand/shallow'
 // Ainimation
-import { motion } from 'framer-motion'
+import { Variants, motion } from 'framer-motion'
 // Config
 import { OC_STATE } from '@/modules/input/config'
 // Types
-import type { OCVariantsConfig, Transition } from '@/types/animation'
+import type { Transition } from '@/types/animation'
 
 /** Animation transition configuration */
-const transition: Readonly<Transition> = {
+const transition: Transition = {
   stiffness: 64,
   damping: 12,
   duration: 0.24,
@@ -17,38 +17,38 @@ const transition: Readonly<Transition> = {
 }
 
 /** Span stick A element animation variants */
-const STICK_A_VARIANTS: OCVariantsConfig = {
-  open: {
+const STICK_A_VARIANTS: Variants = {
+  [OC_STATE.open]: {
     top: 17,
     rotate: '45deg',
     transition
   },
-  closed: {
+  [OC_STATE.closed]: {
     top: 8.5,
     transition
   }
 }
 
 /** Span stick B element animation variants */
-const SPAN_B_VARIANTS: OCVariantsConfig = {
-  open: {
+const SPAN_B_VARIANTS: Variants = {
+  [OC_STATE.open]: {
     opacity: 0,
     transition
   },
-  closed: {
+  [OC_STATE.closed]: {
     opacity: 1,
     transition
   }
 }
 
 /** Span stick C element animation variants */
-const SPAN_C_VARIANTS: OCVariantsConfig = {
-  open: {
+const SPAN_C_VARIANTS: Variants = {
+  [OC_STATE.open]: {
     bottom: 17,
     rotate: '-45deg',
     transition
   },
-  closed: {
+  [OC_STATE.closed]: {
     bottom: 7,
     transition
   }

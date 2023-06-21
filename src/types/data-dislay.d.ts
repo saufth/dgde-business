@@ -3,24 +3,13 @@ import type { Navigable } from './navigation'
 import type { Dimensionable, SizeProps } from './sizing'
 import type { Nameable } from './common'
 import type { Themeable } from './theme'
-import { ID } from './layout'
-
-/** Video names of the application */
-export type VideoApp = 'hero'
-
-/** The video component properties */
-export interface VideoProps extends Nameable<VideoApp> {}
+import type { IMG_EXT, LOGO_TYPES } from '@/modules/data-display/config'
 
 /** Image extention type */
-export type ImageExt = 'svg'
-  | 'jpg'
-  | 'png'
+export type ImageExt = typeof IMG_EXT[keyof typeof IMG_EXT]
 
 /** Logo component types */
-export type LogoType = 'logotype'
-  | 'logoname'
-  | 'logomark'
-  | 'logovertical'
+export type LogoType = typeof LOGO_TYPES[keyof typeof LOGO_TYPES]
 
 /** The image component properties */
 export interface ImageProps extends Nameable, Dimensionable {
@@ -42,27 +31,6 @@ export interface LogoProps extends
   type?: LogoType
 }
 
-/** The svg icons of the application */
-export type AppIcon = 'facebook'
-  | 'instagram'
-  | 'tiktok'
-  | 'linkedin'
-
-/** The icon component props */
-export interface IconProps extends Nameable<AppIcon> {}
-
-/** The svg icon properties */
-export interface SVGIcon extends Dimensionable {
-  /** The svg icon path */
-  path: string
-}
-
-/** Used for url configurations */
-export interface URLIcon extends Nameable<AppIcon> {
-  /** Item URL */
-  url: URL
-}
-
 /** Header properties */
 export interface HeaderProps {
   /** Header heading */
@@ -71,7 +39,9 @@ export interface HeaderProps {
   description: string | string[]
 }
 
-export interface ShowcaseProps extends ID, HeaderProps, Partial<Pick<Navigable, 'href'>> {
+export interface ShowcaseProps extends HeaderProps, Partial<Pick<Navigable, 'href'>> {
+  /** The element id property */
+  id?: string
   /** The image properties */
   image: ImageProps
   /** Used to invert the order of the content */

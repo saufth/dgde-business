@@ -3,18 +3,18 @@ import { create } from 'zustand'
 // Config
 import { OCH_STATE, OC_STATE } from '../input/config'
 // Types
-import type { OCHState, OCState } from '@/types/input'
+import type { OCState } from '@/types/input'
 
 /** Gobal state properties */
 export interface GlobalState {
   /** Navbar menu state */
   menuState: OCState
   /** ButtonMenu state */
-  buttonMenuState: OCHState
+  buttonMenuState: OCState
   /** Used to toggle the Navbar menu state */
   setMenuState: (newState: OCState) => void
   /** Used to toggle the ButtonMenu state */
-  setButtonMenuState: (newState: OCHState) => void
+  setButtonMenuState: (newState: OCState) => void
 }
 
 /** The global store */

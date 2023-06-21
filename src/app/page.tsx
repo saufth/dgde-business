@@ -8,11 +8,9 @@ import { APP_ROUTES, CONTACT_NAV } from '@/modules/navigation/config'
 import { IMG_EXT, LOGO_TYPES, PICTURES_SIZE } from '@/modules/data-display/config'
 import { SOLUTIONS, description, organization } from '@/modules/app/config'
 import { SIZES } from '@/modules/sizing/config'
-// Types
-import type { HeaderProps } from '@/types/data-dislay'
 
 /** The headers configuration for solutions section */
-const SOLUTIONS_HEADERS: ReadonlyArray<HeaderProps> = [
+const SOLUTIONS_HEADERS = [
   {
     heading: SOLUTIONS[0],
     description: 'Protegemos tu infraestructura contra amenazas potenciales mediante la instalación de sistemas de videovigilancia. Realizamos auditorias de seguridad periódicas y pruebas de penetración para identificar y solucionar cualquier vulnerabilidad. Nuestro equipo de expertos en seguridad está disponible las 24 horas del día, los 365 días del año.'
@@ -29,10 +27,10 @@ const SOLUTIONS_HEADERS: ReadonlyArray<HeaderProps> = [
     heading: SOLUTIONS[3],
     description: 'Realizamos la configuración, revisión y monitoreo tanto de alarma, cómo de diferentes sensores (apertura, movimiento, humo, gas, agua, etc.), para garantizar su correcto funcionamiento. Al mismo tiempo, ofrecemos un mantenimiento proactivo para identificar y solucionar problemas antes de que puedan afectar tu bienestar, el de tu familia, empleados, socios, colaboradores, inversiones y patrimonio.'
   }
-]
+] as const
 
 /** The headers configuration for values section */
-const VALUES_HEADERS: ReadonlyArray<HeaderProps> = [
+const VALUES_HEADERS = [
   {
     heading: 'Innovación',
     description: 'Creemos en el poder de la innovación para cambiar el mundo. Nuestras soluciones están a la vanguardia de la tecnología, proporcionando a nuestros clientes las herramientas más actualizadas y eficientes para su crecimiento.'
@@ -53,7 +51,7 @@ const VALUES_HEADERS: ReadonlyArray<HeaderProps> = [
     heading: 'Colaboración',
     description: 'Creemos que el éxito se logra mejor trabajando en equipo. Nos esforzamos por fomentar una cultura de cooperación, tanto internamente, como con nuestros clientes y socios.'
   }
-]
+] as const
 
 /** The home page of the application */
 export default function HomePage () {

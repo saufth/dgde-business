@@ -5,30 +5,25 @@ import { SIZES } from '@/modules/sizing/config'
 import { THEMES } from '@/modules/theme/config'
 // Types
 import type { LinkProps } from '@/types/navigation'
-import type { Size } from '@/types/sizing'
-import type { Theme } from '@/types/theme'
 
 /** The link size style configuration */
-const SIZE_STYLES: Readonly<Record<Size, string>> = {
-  sm: '',
-  md: 'font-secondary-medium',
-  lg: 'font-secondary-medium text-5xl md:text-7xl'
-}
+const SIZE_STYLES = {
+  [SIZES.sm]: '',
+  [SIZES.md]: 'font-secondary-medium',
+  [SIZES.lg]: 'font-secondary-medium text-5xl md:text-7xl'
+} as const
 
 /** The link theme style configuration */
-const THEME_STYLES: Readonly<Record<Theme, string>> = {
-  primary: ' hover:text-secondary',
-  secondary: 'text-white hover:text-primary'
-}
+const THEME_STYLES = {
+  [THEMES.primary]: ' hover:text-secondary',
+  [THEMES.secondary]: 'text-white hover:text-primary'
+} as const
 
 /**
  * A simple link component for navigation
  * @see {@link LinkProps} for props specification
  * @param LinkProps The component props
  * @returns The Link component
- *
- * @default size 'md'
- * @default theme 'primary'
  */
 export default function Link ({
   children,

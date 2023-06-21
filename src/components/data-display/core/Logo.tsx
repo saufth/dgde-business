@@ -3,40 +3,40 @@ import Image from 'next/image'
 // Config
 import { IMG_EXT, LOGO_TYPES, logosPath } from '@/modules/data-display/config'
 import { organization } from '@/modules/app/config'
+import { SIZES } from '@/modules/sizing/config'
 import { THEMES } from '@/modules/theme/config'
 // Types
-import type { Dimensionable, Size } from '@/types/sizing'
-import type { LogoProps, LogoType } from '@/types/data-dislay'
+import type { LogoProps } from '@/types/data-dislay'
 
 /** The default logotype height */
 const logoHeight = 512
 
 /** Logo component sizes configuration */
-const LOGO_SIZES: Readonly<Record<LogoType, Dimensionable>> = {
-  logotype: {
+const LOGO_SIZES = {
+  [LOGO_TYPES.logotype]: {
     width: 597.43401,
     height: logoHeight
   },
-  logoname: {
+  [LOGO_TYPES.logoname]: {
     width: 692.175,
     height: logoHeight
   },
-  logomark: {
+  [LOGO_TYPES.logomark]: {
     width: 525.226,
     height: logoHeight
   },
-  logovertical: {
+  [LOGO_TYPES.logovertical]: {
     width: 1735.008,
     height: logoHeight
   }
-}
+} as const
 
 /** Logo component size styles configuration */
-const LOGO_SIZE_STYLES: Readonly<Record<Size, string>> = {
-  sm: 'h-9',
-  md: 'h-16',
-  lg: 'h-24'
-}
+const LOGO_SIZE_STYLES = {
+  [SIZES.sm]: 'h-9',
+  [SIZES.md]: 'h-16',
+  [SIZES.lg]: 'h-24'
+} as const
 
 /**
  * The main logotype of the application

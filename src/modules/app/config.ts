@@ -23,12 +23,12 @@ export const organization = 'DGD E-Business Group'
 export const description = 'Soluciones en seguridad electrónica'
 
 /** Organization solutions */
-export const SOLUTIONS: ReadonlyArray<string> = [
+export const SOLUTIONS = [
   'Seguridad Electrónica',
   'Control Inteligente',
   'Instalación y mantenimiento de redes',
   'Gestión y mantenimiento de sistemas'
-]
+] as const
 
 /** The keyword list of the application */
 export const keywords = [

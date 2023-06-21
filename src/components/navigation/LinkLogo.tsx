@@ -5,17 +5,17 @@ import Logo from '../data-display/core/Logo'
 import { LOGO_TYPES } from '@/modules/data-display/config'
 import { SIZES } from '@/modules/sizing/config'
 // Types
-import type { Themeable } from '@/types/theme'
+import type { ActionThemeProps } from '@/types/common'
 
 /**
  * The main logo link used to redirect to home page
- * @see {@link Themeable} for props specifications
- * @param Themeable The component props
+ * @see {@link ActionThemeProps} for props specifications
+ * @param ActionThemeProps The component props
  * @returns The LinkLogo component
  */
-export default function LinkLogo ({ theme }: Themeable) {
+export default function LinkLogo ({ action, theme }: ActionThemeProps) {
   return (
-    <NextLink className='max-w-fit' href='/'>
+    <NextLink className='max-w-fit' href='/' onClick={action}>
       <Logo type={LOGO_TYPES.logovertical} theme={theme} size={SIZES.sm} />
     </NextLink>
   )

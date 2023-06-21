@@ -1,13 +1,11 @@
-/** Application themes */
-export type Theme = 'primary' | 'secondary'
+// Types
+import type { THEMES } from '@/modules/theme/config'
 
 /** Application themes */
-export type ThemeVariant = 'dark' | 'light'
+export type Theme = typeof THEMES[keyof typeof THEMES]
 
 /** Used for define a theme */
 export interface Themeable {
   /** Theme property */
   theme?: Theme
-  /** Theme variant property */
-  variant?: ThemeVariant
 }

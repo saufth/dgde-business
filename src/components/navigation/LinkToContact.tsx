@@ -3,17 +3,17 @@ import LinkButton from './core/LinkButton'
 // Config
 import { CONTACT_NAV } from '@/modules/navigation/config'
 // Types
-import type { Themeable } from '@/types/theme'
+import type { ActionThemeProps } from '@/types/common'
 
 /**
  * The main link to contact page
- * @see {@link Themeable} for props specifications
- * @param Themeable The component props
+ * @see {@link ActionThemeProps} for props specifications
+ * @param ActionThemeProps The component props
  * @returns The LinkToContact component
  */
-export default function LinkToContact ({ theme }: Themeable) {
+export default function LinkToContact ({ action, theme }: ActionThemeProps) {
   return (
-    <LinkButton href={CONTACT_NAV.href} theme={theme}>
+    <LinkButton href={CONTACT_NAV.href} action={action} theme={theme}>
       {CONTACT_NAV.children}
     </LinkButton>
   )

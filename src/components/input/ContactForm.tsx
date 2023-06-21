@@ -5,7 +5,7 @@ import Button from '@/components/input/core/Button'
 import { useRef, FormEvent, useState } from 'react'
 import ReCAPTCHA from 'react-google-recaptcha'
 // Types
-import type { MailerData } from '@/types/common'
+import type { MailerData } from '@/types/core'
 
 /** The google recaptcha site key */
 const recaptchaSitekey = String(process.env.NEXT_PUBLIC_GOOGLE_RECAPTCHA_KEY)

@@ -9,7 +9,7 @@ import { baseUrl } from '@/modules/app/config'
 import { usePathname } from 'next/navigation'
 
 /** Google analitycs tacking id */
-const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS
+const GA_TRACKING_ID = String(process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS)
 
 /**
  * Add the current page path configuration to google analytics

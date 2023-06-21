@@ -2,23 +2,24 @@
 import Link from './core/Link'
 // Config
 import { contactEmail } from '@/modules/app/config'
-import { THEMES } from '@/modules/theme/config'
 // Types
-import type { Themeable } from '@/types/theme'
+import type { ActionThemeProps } from '@/types/common'
 
 /**
  * The main link to redirect to the default email provider interface of the user
- * @see {@link Themeable} for props specifications
- * @param Themeable The component props
+ * @see {@link ActionThemeProps} for props specifications
+ * @param ActionThemeProps The component props
  * @returns The LinkEmail component
  */
-export default function LinkEmail ({ theme = THEMES.primary }: Themeable) {
+export default function LinkEmail ({ action, theme }: ActionThemeProps) {
   return (
     <div className='max-w-fit'>
       <Link
         href={`mailto:${contactEmail}`}
+        action={action}
         theme={theme}
-        rel={['noopener', 'noreferrer']}
+        target='_blank'
+        rel='noreferrer'
         underline
       >
         {contactEmail}

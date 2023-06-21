@@ -2,7 +2,7 @@
 import { NextResponse } from 'next/server'
 import nodemailer from 'nodemailer'
 // Types
-import type { MailerData } from '@/types/common'
+import type { MailerData } from '@/types/core'
 
 const noreplyEmail = String(process.env.GMAIL_NOREPLY)
 

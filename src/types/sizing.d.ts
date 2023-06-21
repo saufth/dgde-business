@@ -1,8 +1,10 @@
+import type { DEVICE_SIZES, SIZES } from '@/modules/sizing/config'
+
 /** Used to define a size property */
-export type Size = 'sm' | 'md' | 'lg'
+export type Size = typeof SIZES[keyof typeof SIZES]
 
 /** Used to define a device size property */
-export type SizeDevice = 'mobile' | 'desktop'
+export type SizeDevice = typeof DEVICE_SIZES[keyof typeof DEVICE_SIZES]
 
 /** The size properties */
 export interface SizeProps {

@@ -1,21 +1,19 @@
-// Types
-import type { ButtonTypes, OCHState, OCState } from '@/types/input'
-
 /** Button types configuration */
-export const BUTTON_TYPES: Readonly<Record<ButtonTypes, ButtonTypes>> = {
+export const BUTTON_TYPES = {
   button: 'button',
   submit: 'submit',
   reset: 'reset'
-}
+} as const
 
 /** The open-closed state configuration */
-export const OC_STATE: Readonly<Record<OCState, OCState>> = {
+export const OC_STATE = {
   open: 'open',
   closed: 'closed'
-}
+} as const
 
 /** The open-closed-hover state configuration */
-export const OCH_STATE: Readonly<Record<OCHState, OCHState>> = {
+export const OCH_STATE = {
   ...OC_STATE,
-  hover: 'hover'
-}
+  hover: 'hover',
+  out: 'out'
+} as const
