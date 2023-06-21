@@ -60,7 +60,7 @@ export default function Navbar () {
       <nav aria-label={navAriaLabel}>
         <div className='w-full h-24 px-3% absolute z-80 flex justify-between items-center bg-secondary/80 backdrop-filter backdrop-blur-lg border-b border-zinc-400/60'>
           <div>
-            <LinkLogo theme={THEMES.secondary} />
+            <LinkLogo action={closeMenu} theme={THEMES.secondary} />
           </div>
           <div className='pr-2 md:pr-2.5'>
             <ButtonMenu />
