@@ -15,7 +15,7 @@ import type { HeaderProps } from '@/types/data-dislay'
 const SOLUTIONS_HEADERS: ReadonlyArray<HeaderProps> = [
   {
     heading: SOLUTIONS[0],
-    description: 'Protegemos tu infraestructura contra amenazas potenciales mediante la instalación de sistemas de videovigilancia. Realizamos auditorias de seguridad periódicas y pruebas de penetración para identificar y solucionar cualquier vulnerabilidad. Nuestro equipo de expertos en seguridad está disponible 24/7 los 365 días del año.'
+    description: 'Protegemos tu infraestructura contra amenazas potenciales mediante la instalación de sistemas de videovigilancia. Realizamos auditorias de seguridad periódicas y pruebas de penetración para identificar y solucionar cualquier vulnerabilidad. Nuestro equipo de expertos en seguridad está disponible las 24 horas del día, los 365 días del año.'
   },
   {
     heading: SOLUTIONS[1],
@@ -23,11 +23,11 @@ const SOLUTIONS_HEADERS: ReadonlyArray<HeaderProps> = [
   },
   {
     heading: SOLUTIONS[2],
-    description: 'Diseñamos e implementamos redes acorde a las necesidades de nuestros clientes.Nuestro equipo de expertos está capacitado para trabajar con una variedad de tecnologías de red, garantizando una conectividad ininterrumpida y segura, dando mantenimiento y actualizaciones constantes para asegurar que tus redes funcionen de manera óptima en todo momento.'
+    description: 'Diseñamos e implementamos redes acorde a las necesidades de nuestros clientes.Nuestro equipo de expertos está capacitado para trabajar con una variedad de tecnologías de red, logrando una conectividad ininterrumpida y segura, dando mantenimiento y actualizaciones constantes para garantizar que tus redes funcionen de manera óptima en todo momento.'
   },
   {
     heading: SOLUTIONS[3],
-    description: 'Realizamos la configuración, revisión y monitoreo de paneles de alarma, sensores de: apertura, movimiento, humo, gas, agua y más; para garantizar su correcto funcionamiento. Al mismo tiempo, ofrecemos un mantenimiento proactivo para identificar y solucionar problemas antes de que puedan afectar tu bienestar, el de tu familia, empleados, socios, colaboradores, inversiones y patrimonio.'
+    description: 'Realizamos la configuración, revisión y monitoreo tanto de alarma, cómo de diferentes sensores (apertura, movimiento, humo, gas, agua, etc.), para garantizar su correcto funcionamiento. Al mismo tiempo, ofrecemos un mantenimiento proactivo para identificar y solucionar problemas antes de que puedan afectar tu bienestar, el de tu familia, empleados, socios, colaboradores, inversiones y patrimonio.'
   }
 ]
 
