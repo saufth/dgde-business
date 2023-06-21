@@ -9,4 +9,4 @@ export interface Nameable<T = string> {
 }
 
 /** Used to define theme and action basic properties */
-export interface ActionThemeProps extends Themeable, Actionable {}
+export interface ActionAndTheme extends Themeable, Actionable {}
